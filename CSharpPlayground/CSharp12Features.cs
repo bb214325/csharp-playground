@@ -89,7 +89,7 @@ public class CSharp12Features
         
         // Alias defined at the top of the file (see using statements)
         Point point = (10, 20);
-        Console.WriteLine($"Point: X={point.Item1}, Y={point.Item2}");
+        Console.WriteLine($"Point: X={point.X}, Y={point.Y}");
     }
 }
 

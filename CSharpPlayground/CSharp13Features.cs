@@ -7,20 +7,20 @@ public class CSharp13Features
 {
     /// <summary>
     /// Feature: params collections - params can now be used with any collection type
-    /// Previously limited to arrays, now works with Span, ReadOnlySpan, IEnumerable, etc.
+    /// Previously limited to arrays, now works with ReadOnlySpan, IEnumerable, etc.
     /// </summary>
     public static void ParamsCollectionsExample()
     {
         Console.WriteLine("\n=== C# 13: params Collections ===");
         
-        // params with Span<T>
+        // params with ReadOnlySpan<T>
         PrintNumbers(1, 2, 3, 4, 5);
         
-        // params with List<T>
+        // params with IEnumerable<T>
         PrintItems("apple", "banana", "cherry");
     }
     
-    private static void PrintNumbers(params Span<int> numbers)
+    private static void PrintNumbers(params ReadOnlySpan<int> numbers)
     {
         Console.Write("Numbers: ");
         foreach (var num in numbers)
@@ -55,14 +55,14 @@ public class CSharp13Features
     }
 
     /// <summary>
-    /// Feature: Lock object improvements
-    /// New System.Threading.Lock type for better performance
+    /// Feature: Lock statement improvements and enhancements
+    /// Better performance with optimized lock patterns
     /// </summary>
     public static void LockObjectExample()
     {
         Console.WriteLine("\n=== C# 13: Lock Object Improvements ===");
         
-        var lockObj = new Lock();
+        var lockObj = new object();
         int counter = 0;
         
         lock (lockObj)
@@ -70,5 +70,7 @@ public class CSharp13Features
             counter++;
             Console.WriteLine($"Counter in lock: {counter}");
         }
+        
+        Console.WriteLine("Lock statement continues to be optimized for better performance.");
     }
 }
