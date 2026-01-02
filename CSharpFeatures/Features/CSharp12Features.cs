@@ -81,7 +81,7 @@ public class CSharp12Features
     {
         Console.WriteLine("4. Alias Any Type:");
         Coordinate coord = (10.5, 20.3);
-        Console.WriteLine($"   Coordinate: ({coord.Item1}, {coord.Item2})");
+        Console.WriteLine($"   Coordinate: ({coord.Latitude}, {coord.Longitude})");
         
         IntArray numbers = [1, 2, 3, 4, 5];
         Console.WriteLine($"   IntArray: [{string.Join(", ", numbers)}]\n");

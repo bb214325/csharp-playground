@@ -70,7 +70,7 @@ public class CSharp11Features
         Console.WriteLine("3. Generic Attributes:");
         Console.WriteLine("   GenericAttributeExample class has TypeId<string> attribute");
         var type = typeof(GenericAttributeExample);
-        var attr = type.GetCustomAttributes(typeof(TypeIdAttribute<>), false).FirstOrDefault();
+        var attr = type.GetCustomAttributes(typeof(TypeIdAttribute<string>), false).FirstOrDefault();
         Console.WriteLine($"   Attribute found: {attr != null}\n");
     }
     
